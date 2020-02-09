@@ -22,10 +22,69 @@
 
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
+  <link href="css/agency.css" rel="stylesheet">
+  <style>
+  /*Formatação botão volta ao topo*/
+
+#myBtnTop {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#myBtnTop:hover {
+    background-color: #555;
+}
+
+
+/*card*/
+
+.collapse-content .fa.fa-heart:hover {
+    color: #f44336 !important;
+}
+
+.collapse-content .fa.fa-share-alt:hover {
+    color: #0d47a1 !important;
+}
+  </style>
 
 </head>
 
 <body id="page-top">
+  <!-- Back to top button -->
+  <button onclick="topFunction()" id="myBtnTop" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+<!--javascript button page up -->
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtnTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<!--Fim do javascript -->
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -59,7 +118,6 @@
       </div>
     </div>
   </nav>
-
   <!-- Header -->
   <header class="masthead">
     <div class="container">
@@ -121,83 +179,102 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">AS NOSSAS MODALIDADES</h2>
-          <h3 class="section-subheading text-warning">Conheça as nossas aulas</h3><!--text-muted-->
+          <h3 class="section-subheading text-warning">Conheça as nossas aulas</h3>
         </div>
       </div>
       <div class="row">
+        <!--Modalidade 1--> <!--img size 1024x682-->
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <!--<div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+            <div class="container1Modalidades">
+              <img class="img img-fluid" src="img/modalidades/thumbnail-theCave.jpg" alt="Crossfit">
+            <div class="middle">
+              <div class="text">
+                <h3><strong>CROSSFIT</strong></h3>
               </div>
-            </div>-->
-            <img class="img-fluid" src="img/modalidades/thumbnail-theCave.jpg" alt="Crossfit">
+            </div>
+            </div>
           </a>
           <div class="portfolio-caption">
             <h4>The Cave</h4>
-            <p class="text-warning">Crossfit</p><!--text-muted-->
+            <p class="text-warning">Crossfit</p>
           </div>
         </div>
+        <!--/.end-->
+
+        <!--Modalidade 2--> <!--img size 1024x682-->
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <!--<div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+          <div class="container2Modalidades">
+              <img class="img img-fluid" src="img/modalidades/thumbnail-karate.jpg" alt="Karate">
+            <div class="middle">
+              <div class="text">
+                <h3><strong>KARATE</strong></h3>
               </div>
-            </div>-->
-            <img class="img-fluid" src="img/modalidades/thumbnail-karate.jpg" alt="Karate">
+            </div>
+            </div>
           </a>
           <div class="portfolio-caption">
             <h4>Disciplina</h4>
             <p class="text-warning">Karate</p><!--text-muted-->
           </div>
         </div>
+        <!--/.end-->
+
+        <!--Modalidade 3--> <!--img size 1024x682-->
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-            <!--<div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+          <div class="container3Modalidades">
+              <img class="img img-fluid" src="img/modalidades/thumbnail-pilates.jpg" alt="Pilates">
+            <div class="middle">
+              <div class="text">
+                <h3><strong>PILATES</strong></h3>
               </div>
-            </div>-->
-            <img class="img-fluid" src="img/modalidades/thumbnail-pilates.jpg" alt="Pilates">
+            </div>
+            </div>
           </a>
-          <div class="modalidade-caption"><!--portfolio-->
+          <div class="modalidade-caption">
             <h4>Bem estar</h4>
-            <p class="text-warning">Pilates</p><!--text-muted-->
+            <p class="text-warning">Pilates</p>
           </div>
         </div>
+        <!--/.end-->
+
+        <!--Modalidade 4--> <!--img size 1024x682-->
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <!--<div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+          <div class="container4Modalidades">
+              <img class="img img-fluid" src="img/modalidades/thumbnail-nutricao.jpg" alt="Nutrição">
+            <div class="middle">
+              <div class="text">
+                <h3><strong>NUTRIÇÃO</strong></h3>
               </div>
-            </div>-->
-            <img class="img-fluid" src="img/modalidades/thumbnail-nutricao.jpg" alt="Nutrição">
+            </div>
+            </div>
           </a>
           <div class="portfolio-caption">
             <h4>The Hive</h4>
-            <p class="text-warning">Nutrição</p><!--text-muted-->
+            <p class="text-warning">Nutrição</p>
           </div>
         </div>
+        <!--/.end-->
       </div>
     </div>
   </section>
 
-  <!-- Equipa -->
+  <!-- Equipa Grid -->
   <section class="bg-light page-section" id="equipa">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Treinadores</h2>
-          <h3 class="section-subheading text-muted">Esta é a equipa que trabalha todos os dias com os nossos atletas.</h3>
+          <h2 class="section-heading text-uppercase">Equipa</h2>
+          <h3 class="section-subheading text-muted">Esta é a equipa de treinadores que trabalha todos os dias com os nossos atletas.</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/equipa/abreu.jpg" alt="Paulo-Abreu">
+            <img class="imgTreinadores mx-auto rounded-circle" src="img/equipa/abreu.jpg" alt="Paulo-Abreu">
             <h4>Paulo Abreu</h4>
             <p class="text-muted">COACH</p>
             <ul class="list-inline social-buttons">
@@ -221,7 +298,7 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/equipa/gandum.jpg" alt="">
+            <img class="imgTreinadores mx-auto rounded-circle" src="img/equipa/gandum.jpg" alt="">
             <h4>Gandum</h4>
             <p class="text-muted">COACH</p>
             <ul class="list-inline social-buttons">
@@ -245,7 +322,7 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/equipa/giovani.jpg" alt="">
+            <img class="imgTreinadores mx-auto rounded-circle" src="img/equipa/giovani.jpg" alt="">
             <h4>Giovani</h4>
             <p class="text-muted">COACH</p>
             <ul class="list-inline social-buttons">
@@ -276,6 +353,7 @@
     </div>
   </section>
 
+<!-- Horario Grid -->
   <section class="py-5 bg-dark  text-light page-section" id="horario">
     <div class="container">
       <div class="row">
@@ -319,6 +397,8 @@
       </div>
     </div>
   </section>
+
+  <!-- /.end -->
 
   <!-- Clients -->
   <section class="py-5">
@@ -501,7 +581,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Modal 3 -->
   <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
@@ -637,6 +716,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <!-- Bootstrap core JavaScript -->
